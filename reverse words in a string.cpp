@@ -5,9 +5,8 @@ int main() {
 	string str;
   	int i, j, len, startIndex, endIndex;
   	getline(cin,str);
-  	len = str.length();
-  	endIndex = len - 1;
-  	for(i = len - 1; i >= 0; i--)
+  	len = str.length()-1;
+  	for(i = len; i >= 0; i--)
 	{
 		if(str[i] == ' ' || i == 0)
 		{
@@ -19,11 +18,11 @@ int main() {
 			{
 				startIndex = i + 1;
 			}
-			for(j = startIndex; j <= endIndex; j++)
+			for(j = startIndex; j <= len; j++)
 			{
 				cout<<str[j];
 			}
-			endIndex = i - 1;
+			 len = i-1;
 			cout<<" ";				
 		} 
 	}
